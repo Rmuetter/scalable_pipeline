@@ -1,2 +1,2 @@
-def test_blabla():
-    assert
+def test_blabla(data):
+    assert len(data)>0
