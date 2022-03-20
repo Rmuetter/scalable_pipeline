@@ -5,7 +5,6 @@ from sklearn import metrics
 
 import pandas as pd
 import pickle
-import dvc
 
 from ml.data import process_data
 from ml.model import *
@@ -42,7 +41,5 @@ model=train_model(X_train, y_train)
 y_pred=inference(model, X_test)
 
 precision, recall, fbeta = compute_model_metrics(y_test, y_pred)
-
-print(precision, recall, fbeta)
 
 pickle.dump(model, open("model.pkl","wb"))
